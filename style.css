@@ -20,6 +20,22 @@ width: 100%;
 width: 100%;
 position: relative;
 }
+#cursor{
+    width: 7.5vw;
+    height: 7.5vw;
+    background-color: #ff5838;
+    position: fixed;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+}
+#cursor h5{
+    font-size: 1.15vw;
+    font-weight: 500;
+    font-family: nb;
+}
 #video-container-first{
 height: 100vh;
 width: 100%;
@@ -55,4 +71,9 @@ position: absolute;
     font-family: headline;
     font-weight: 100;
     line-height: 27vw;
+}
+#container-second{
+    width: 100%;
+    height: 100vh;
+    background-color: antiquewhite;
 }
