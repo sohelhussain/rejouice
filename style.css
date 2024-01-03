@@ -76,13 +76,48 @@ position: absolute;
     width: 100%;
     height: 100vh;
     padding: 5vw 2.5vw;
-}
+    position: relative;
+    background-color: #FAF8F3;
 
+}
+.second-top-text{
+    font-family: nb;
+    font-size: 1.1vw;
+}
+.second-top-text h2{
+    font-weight: 400;
+}
+.second-flex-text{
+    margin-top: .5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.second-flex-text h2{
+    font-weight: 400;
+}
+.second-top-line{
+    width: 100%;
+    height: 2px;
+    background-color: rgb(88, 87, 87);
+    border-radius: 5px;
+    margin-top: .5vw;
+}
+.text_elem{
+    font-family: nb;
+    font-size: 2.1vw;
+    margin-top: 1.2vw;
+}
+.text_elem h1{
+    font-weight: 400;
+}
 
 #container-third{
     min-height: 100vh;
     width: 100%;
     padding: 3vw;
+    background-color: #FAF8F3;
+
 }
 .third-text-box{
     text-align: center;
