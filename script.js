@@ -57,3 +57,16 @@ innerPageone.addEventListener("mouseleave",(value) => {
 })
 };
 cursorEffect();
+gsap.from(".text_elem h1",{
+    y:120,
+    stagger:.2,
+    duration:1,
+    ScrollTrigger:{
+      trigger:"#container-second",
+      scroller:"#main",
+      start:"top 47%",
+      end:"top 46%",
+      markers: true,
+      scrub:2
+    }
+})
