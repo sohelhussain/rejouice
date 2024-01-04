@@ -18,8 +18,17 @@
       href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Simple_orange_circle.svg/2048px-Simple_orange_circle.svg.png"
       type="image/x-icon"
     />
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
   </head>
   <body>
+    <div id="loader">
+      <h3>Tomoro's</h3>
+      <h3>Brands</h3>
+      <h3>Today <span>™</span></h3>
+    </div>
     <div id="main">
       <div id="video-container-first">
         <div id="cursor">
@@ -137,6 +146,19 @@
             best team, which is the only team we have.
           </h1>
         </div>
+        <div class="moving-round">
+          <div id="black-cursor">
+            <h5>Take it!</h5>
+          </div>
+          <video id="moving-graphic" muted loop autoplay src="https://rejouice.com/assets/videos/RJ-BALL-BLUE-ORANGE-scaled.webm"></video>
+          <svg class="abs tl:0 fit transform rotate:-90deg" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="49" stroke="#fff" stroke-width="0.25" fill="none" class="o:0.3 dasharray:302 dashoffset:604 (.in-view):dashoffset:400 (.in-view):tween:all,2.8s,easeOutSlow "></circle>
+            <circle cx="50" cy="50" r="49" stroke="#fff" stroke-width="0.25" fill="none" class="dasharray:302 dashoffset:302 (.in-view):dashoffset:100 (.in-view):tween:all,2.8s,easeOutSlow "></circle>
+        </svg>
+        <svg class="abs tl:0 fit transform rotate:0 (.in-view):rotate:237deg (.in-view):tween:all,2.8s,easeOutSlow " viewBox="0 0 100 100">
+          <circle cx="50" cy="1" r="1" fill="#fff"></circle>
+      </svg>
+        </div>
       </div>
       <div id="container-five">
         <div class="second-top-text">
@@ -164,13 +186,33 @@
         </div>
       </div>
       <div id="container-six">
-        <div class="third-text-box">
+        <div class="swiper_box">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="https://images.prismic.io/rejouice/d3289122-3f25-43f3-b140-11a342a484d7_Mask+group+%2838%29.jpg?auto=compress%2Cformat&fm=webp&width=3840" alt="">
+                <img src="https://images.prismic.io/rejouice/8059f4af-8ba3-4e5f-a14b-ba5ed760963f_Mask+group+%2839%29.jpg?auto=compress%2Cformat&fm=webp&width=3840" alt="">
+                <img src="https://images.prismic.io/rejouice/57ac2830-96e7-4174-a104-b384126bf98c_fec955552eb681ff6c273774515e6c2e.jpg?auto=compress%2Cformat&fm=webp&width=3840" alt="">
+                <img src="https://images.prismic.io/rejouice/a19d8427-5008-4dce-afa4-5d66118a0463_d7a851a9d8e2eb36cf93ffe4a6fa3701.jpeg?auto=compress%2Cformat&fm=webp&width=3840" alt="">
+                <img src="https://images.prismic.io/rejouice/36450525-8a76-4a44-b6d4-59c00ad0b50d_RJ-Home-OuraRing-x2.png?auto=compress%2Cformat&fm=webp&width=3840" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="https://images.prismic.io/rejouice/d3289122-3f25-43f3-b140-11a342a484d7_Mask+group+%2838%29.jpg?auto=compress%2Cformat&fm=webp&width=3840" alt="">
+                <img src="https://images.prismic.io/rejouice/8059f4af-8ba3-4e5f-a14b-ba5ed760963f_Mask+group+%2839%29.jpg?auto=compress%2Cformat&fm=webp&width=3840" alt="">
+                <img src="https://images.prismic.io/rejouice/57ac2830-96e7-4174-a104-b384126bf98c_fec955552eb681ff6c273774515e6c2e.jpg?auto=compress%2Cformat&fm=webp&width=3840" alt="">
+                <img src="https://images.prismic.io/rejouice/a19d8427-5008-4dce-afa4-5d66118a0463_d7a851a9d8e2eb36cf93ffe4a6fa3701.jpeg?auto=compress%2Cformat&fm=webp&width=3840" alt="">
+                <img src="https://images.prismic.io/rejouice/36450525-8a76-4a44-b6d4-59c00ad0b50d_RJ-Home-OuraRing-x2.png?auto=compress%2Cformat&fm=webp&width=3840" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="third-text-box">
           <h5>
             Our strength lies in our people
             <i class="ri-corner-right-down-line"></i>
           </h5>
           <h1>Meet your team</h1>
-        </div>
+        </div> -->
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
@@ -186,6 +228,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

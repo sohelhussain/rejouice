@@ -31,6 +31,33 @@ ScrollTrigger.refresh();
 
 };
 locoScroll();
+const loaderEffect = () => {
+  let tl = gsap.timeline();
+tl.from("#loader h3",{
+  x: 100,
+  opacity: 0,
+  duration:1,
+  stagger:.1
+})
+tl.to("#loader h3",{
+  x: -100,
+  opacity:0,
+  duration:1,
+  stagger:.1
+});
+// tl.to("#loader",{
+//   opacity:0
+// })
+tl.to("#loader",{
+  display: "none"
+})
+tl.from("#upper-container-first h1 span",{
+  y:500,
+  duration:.5,
+  stagger:.1,
+})
+}
+loaderEffect();
 const cursorEffect = () => {
 let innerPageone = document.querySelector("#upper-container-first");
 let cursor = document.querySelector("#cursor");
@@ -57,16 +84,88 @@ innerPageone.addEventListener("mouseleave",(value) => {
 })
 };
 cursorEffect();
-gsap.from(".text_elem h1",{
+const textEffect = () =>{
+  let tl2 = gsap.timeline();
+  tl2.from(".text_elem h1",{
     y:120,
-    stagger:.2,
+    stagger:.1,
     duration:1,
-    ScrollTrigger:{
+    opacity: 0,
+    scrollTrigger:({
       trigger:"#container-second",
       scroller:"#main",
-      start:"top 47%",
-      end:"top 46%",
+      start:"top 50%",
+      end:"top 50%",
       markers: true,
       scrub:2
+    })
+  });
+
+  // this prat are not working properly...
+
+  // tl2.from(".text_elem h1",{
+  //   y:120,
+  //   stagger:.1,
+  //   duration:1,
+  //   opacity: 0,
+  //   scrollTrigger:({
+  //     trigger:"#container-four",
+  //     scroller:"#main",
+  //     start:"top 50%",
+  //     end:"top 50%",
+  //     markers: true,
+  //     scrub:2
+  //   })
+  // });
+  // tl2.from("#container-five>.text_elem h1",{
+  //   y:120,
+  //   duration:1,
+  //   stagger:.1,
+  //   opacity: 0,
+  //   scrollTrigger:({
+  //     trigger:"#container-five",
+  //     scroller:"#main",
+  //     scrub:2,
+  //     start:"top 50%",
+  //     end:"top 50%",
+  //     markers: true,
+  //   })
+  // });
+}
+textEffect();
+const graphicCursorEffect = () =>{
+  let videoCursor = document.querySelector("#container-four");
+  let blackCursor = document.querySelector("#black-cursor");
+  videoCursor.addEventListener("mousemove",(dets) => {
+    gsap.to(blackCursor,{
+      x: dets.x,
+      y: dets.y
+  })
+  });
+  videoCursor.addEventListener("mouseenter",(detes)=>{
+    gsap.to(blackCursor,{
+      scale:1,
+      opacity:1
+    })
+  });
+  videoCursor.addEventListener("mouseleave",(detes)=>{
+    gsap.to(blackCursor,{
+      opacity:0,
+      scale:0
+    })
+  })
+};
+graphicCursorEffect();  // this part ar also note woring
+
+const sliderAnimationEffect = () =>{
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 1500,
+      disableOnInteraction: false,
     }
-})
+  });
+};
+sliderAnimationEffect();
